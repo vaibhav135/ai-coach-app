@@ -1,16 +1,72 @@
-# ai_coach
+# AI Coach App
 
-A new Flutter project.
+AI-powered productivity coaching app with real-time voice/video communication.
+
+## Tech Stack
+
+- **Framework:** Flutter 3.38+
+- **State Management:** Riverpod + Hooks
+- **Navigation:** GoRouter
+- **UI Components:** shadcn_ui
+- **Voice/Video:** LiveKit
+- **HTTP Client:** Dio
+- **Storage:** flutter_secure_storage
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter SDK 3.10+
+- Android Studio / VS Code
+- Android SDK (for Android development)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+# Clone the repo
+git clone https://github.com/vaibhav135/ai-coach-app.git
+cd ai-coach-app
+
+# Install dependencies
+flutter pub get
+
+# Run the app
+flutter run
+```
+
+### Environment Setup
+
+Copy `.env.example` to `.env` and fill in your values:
+
+```bash
+cp .env.example .env
+```
+
+## Project Structure
+
+```
+lib/
+  core/           # App-wide utilities, constants, themes
+  features/       # Feature modules
+    auth/
+    coaching/
+    settings/
+  shared/         # Shared widgets, utilities
+  main.dart
+```
+
+## Development
+
+### Pre-commit Hooks
+
+This project uses husky for pre-commit hooks:
+- `dart format --fix` - Auto-format code
+- `dart analyze` - Static analysis
+
+### Code Style
+
+See [claude.md](./claude.md) for Dart/Flutter coding guidelines.
+
+## License
+
+MIT
